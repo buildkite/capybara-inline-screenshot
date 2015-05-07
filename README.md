@@ -23,7 +23,7 @@ gem 'capybara-inline-screenshot'
 And replace your call to:
 
 ```ruby
-require 'capybara/screenshot/rspec'
+require 'capybara-screenshot/rspec'
 ```
 
 with:
