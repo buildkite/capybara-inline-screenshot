@@ -30,9 +30,15 @@ with:
 require 'capybara-inline-screenshot/rspec'
 ```
 
-## Escape code strategies
+## Fallback
 
-If `CI` environment variable is not present it will output screenshots in base64 encoded [iTerm2 image format](http://iterm2.com/images.html), and if `CI` is present it will output in the [Terminal artifact:// format](http://buildkite.github.io/terminal/inline-images/).
+Thanks the wonder of ANSI escape codes if your terminal client doesn't understand what this gem outputs it'll simply ignore it (it'll be like you're just using the standard capybara-screenshot). But if it does support it: INLINE IMAGES!
+
+## CI-mode
+
+If the `CI` environment variable is present it will output screenshots in the [Terminal artifact:// format](http://buildkite.github.io/terminal/inline-images/) with the expectation that the images are uploaded as build artifacts and inlined by your CI system.
+
+If the `CI` environment variable is not present it will output screenshots in the base64 encoded [iTerm2 image format](http://iterm2.com/images.html) for viewing in a local terminal.
 
 ## License
 
