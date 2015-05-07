@@ -32,7 +32,7 @@ require 'capybara-inline-screenshot/rspec'
 
 ## Fallback
 
-Thanks the wonder of ANSI escape codes if your terminal client doesn't understand what this gem outputs it'll simply ignore it (it'll be like you're just using the standard capybara-screenshot). But if it does support it: INLINE IMAGES!
+Thanks the wonder of ANSI escape codes if your terminal client doesn't understand the escape codes it'll simply ignore them—it'll just be be like using the standard capybara-screenshot gem.
 
 ## CI-mode
 
