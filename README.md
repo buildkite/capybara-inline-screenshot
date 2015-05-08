@@ -12,13 +12,13 @@ In [Buildkite](https://buildkite.com/):
 
 ## Usage
 
-Add it to your Gemfile (after `capybara-screenshot`):
+In your Gemfile simply replace `capybara-screenshot` with `capybara-inline-screenshot`:
 
 ```ruby
 gem 'capybara-inline-screenshot'
 ```
 
-And replace your call to:
+And where you initialize Capybara simply replace your call to:
 
 ```ruby
 require 'capybara-screenshot/rspec'
