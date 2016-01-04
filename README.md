@@ -18,6 +18,9 @@ In your Gemfile simply replace `capybara-screenshot` with `capybara-inline-scree
 gem 'capybara-inline-screenshot'
 ```
 
+
+### RSpec
+
 And where you initialize Capybara simply replace your call to:
 
 ```ruby
@@ -28,6 +31,14 @@ with:
 
 ```ruby
 require 'capybara-inline-screenshot/rspec'
+```
+
+### Cucumber
+
+For cucumber we use a different file
+
+```ruby
+require 'capybara-inline-screenshot/cucumber'
 ```
 
 The final step is to configure your build steps to upload the screenshot artifacts. The default path is your app’s `tmp` directory, so the artifact upload pattern would be `tmp/*.png`
