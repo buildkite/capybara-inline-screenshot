@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name        = "capybara-inline-screenshot"
-  gem.version     = "1.0.0"
+  gem.version     = "2.0.0"
   gem.author      = "Tim Lucas"
   gem.email       = "t@toolmantim.com"
   gem.homepage    = "http://github.com/buildkite/capybara-inline-screenshot"
