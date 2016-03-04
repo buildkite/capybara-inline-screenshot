@@ -48,7 +48,7 @@ require 'capybara-inline-screenshot/minitest'
 
 and then include it in your tests as you need:
 
-```
+```ruby
 class SystemTest < Minitest::Test
   include CapybaraInlineScreenshot::Minitest
 end
