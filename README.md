@@ -20,7 +20,7 @@ gem 'capybara-inline-screenshot'
 
 ### RSpec
 
-For Rspec update your capabara-screenshot `require` statement from:
+For RSpec update your capabara-screenshot `require` statement from:
 
 ```ruby
 require 'capybara-screenshot/rspec'
