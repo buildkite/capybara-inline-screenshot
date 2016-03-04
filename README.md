@@ -2,7 +2,7 @@
 
 Extends [capybara-screenshot](https://github.com/mattheworiordan/capybara-screenshot) with inline image output.
 
-In [iTerm2 (nightly)](http://iterm2.com/):
+In [iTerm3 (beta)](https://www.iterm2.com/version3.html):
 
 ![Screenshot of iTerm2](screenshots/iterm.png)
 
@@ -18,28 +18,57 @@ In your Gemfile simply replace `capybara-screenshot` with `capybara-inline-scree
 gem 'capybara-inline-screenshot'
 ```
 
-
 ### RSpec
 
-And where you initialize Capybara simply replace your call to:
+For Rspec update your capabara-screenshot `require` statement from:
 
 ```ruby
 require 'capybara-screenshot/rspec'
 ```
 
-with:
+to:
 
 ```ruby
 require 'capybara-inline-screenshot/rspec'
 ```
 
+### MiniTest
+
+For MiniTest update your capabara-screenshot `require` statement from:
+
+```ruby
+require 'capybara-screenshot/rspec'
+```
+
+to:
+
+```ruby
+require 'capybara-inline-screenshot/minitest'
+```
+
+and then include it in your tests as you need:
+
+```
+class SystemTest < Minitest::Test
+  include CapybaraInlineScreenshot::Minitest
+end
+```
+
 ### Cucumber
 
-For cucumber we use a different file
+For Cucumber update your capabara-screenshot `require` statement from:
+
+```ruby
+require 'capybara-screenshot/cucumber'
+```
+
+to:
 
 ```ruby
 require 'capybara-inline-screenshot/cucumber'
 ```
+
+### Artifact uploads
 
 The final step is to configure your build steps to upload the screenshot artifacts. The default path is your app’s `tmp` directory, so the artifact upload pattern would be `tmp/*.png`
 
