@@ -10,7 +10,7 @@ module CapybaraInlineScreenshot
   end
 
   def self.base_artifact_dir
-    @base_artifact_dir || Rails.root
+    @base_artifact_dir || (Rails.root if defined? Rails)
   end
 
   def self.escape_code_for_image(path)
