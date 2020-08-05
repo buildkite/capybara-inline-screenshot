@@ -16,7 +16,8 @@ After do |scenario|
 
       if File.exist?(saver.screenshot_path)
         encoded_img = CapybaraInlineScreenshot.inline_base64(File.read(saver.screenshot_path))
-        embed(encoded_img, 'image/png;base64', "Screenshot of the error")
+        method = respond_to?(:attach) ? :attach : :embed
+        send(method, encoded_img, 'image/png;base64')
 
         STDOUT.puts CapybaraInlineScreenshot.escape_code_for_image(saver.screenshot_path)
       end
